@@ -15,9 +15,9 @@ KingKong Robotics のオープンソース六脚カニ型ロボット **Jumper**
 
 このシミュレーションの記録 1 本から、Crab Robot Challenge 2026 第1ラウンド用に 38 秒の短編を作りました。
 
-![シャッターの下をくぐるロボット（映像の1コマ）](docs/media/08-shutter.jpg)
+[![シャッターの下をくぐるロボット（映像の1コマ、クリックで再生）](docs/media/08-shutter.jpg)](https://youtu.be/emXaCGlqeoA)
 
-**映像:** [リリースページ](../../releases/tag/v1)の `jumper_round1_short_E_1080p.mp4`（1920×1080、25 fps、37.9 秒）。学習済みの重みも同じページにあります。
+▶ **動画:** [YouTube](https://youtu.be/emXaCGlqeoA)（37.9 秒）。1080p のファイルと学習済みの重みは[リリースページ](../../releases/tag/v1)にあります。
 
 ## シミュレーションのもの、そうでないもの
 

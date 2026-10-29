@@ -14,10 +14,10 @@ ducks, jumps or raises a claw when something flies at the robot.
 
 From one simulation recording we made a 38-second short film for Round 1 of the Crab Robot Challenge 2026.
 
-![the robot passing under the shutter, a frame from the film](docs/media/08-shutter.jpg)
+[![the robot passing under the shutter, a frame from the film (click to watch)](docs/media/08-shutter.jpg)](https://youtu.be/emXaCGlqeoA)
 
-**Film:** `jumper_round1_short_E_1080p.mp4` on the [release page](../../releases/tag/v1)
-(1920×1080, 25 fps, 37.9 s). The same page has the trained weights.
+▶ **Video:** [YouTube](https://youtu.be/emXaCGlqeoA) (37.9 s). The 1080p file and the trained weights are on the
+[release page](../../releases/tag/v1).
 
 ## What is simulated, and what is not
 
