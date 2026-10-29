@@ -1,0 +1,110 @@
+{
+  "meta": {
+    "checkpoint": "tasks/jumper/posture/out/example/model_74800.pt",
+    "vnc_config": null,
+    "robots": 384,
+    "throws": 4,
+    "flight_s": 0.4,
+    "dist_m": 1.0,
+    "seed": 20261024,
+    "hit_rate": 1.0
+  },
+  "rows": [
+    {
+      "command": "walk",
+      "bearing": "front",
+      "n": 32,
+      "throws": 4,
+      "hit_rate": 1.0,
+      "fell": 0.0
+    },
+    {
+      "command": "walk",
+      "bearing": "front_left",
+      "n": 32,
+      "throws": 4,
+      "hit_rate": 1.0,
+      "fell": 0.0
+    },
+    {
+      "command": "walk",
+      "bearing": "left",
+      "n": 32,
+      "throws": 4,
+      "hit_rate": 1.0,
+      "fell": 0.0
+    },
+    {
+      "command": "walk",
+      "bearing": "back_left",
+      "n": 32,
+      "throws": 4,
+      "hit_rate": 1.0,
+      "fell": 0.0
+    },
+    {
+      "command": "walk",
+      "bearing": "back",
+      "n": 32,
+      "throws": 4,
+      "hit_rate": 1.0,
+      "fell": 0.0
+    },
+    {
+      "command": "walk",
+      "bearing": "right",
+      "n": 32,
+      "throws": 4,
+      "hit_rate": 1.0,
+      "fell": 0.0
+    },
+    {
+      "command": "run",
+      "bearing": "front",
+      "n": 32,
+      "throws": 4,
+      "hit_rate": 1.0,
+      "fell": 0.0
+    },
+    {
+      "command": "run",
+      "bearing": "front_left",
+      "n": 32,
+      "throws": 4,
+      "hit_rate": 1.0,
+      "fell": 0.0
+    },
+    {
+      "command": "run",
+      "bearing": "left",
+      "n": 32,
+      "throws": 4,
+      "hit_rate": 1.0,
+      "fell": 0.0
+    },
+    {
+      "command": "run",
+      "bearing": "back_left",
+      "n": 32,
+      "throws": 4,
+      "hit_rate": 1.0,
+      "fell": 0.0
+    },
+    {
+      "command": "run",
+      "bearing": "back",
+      "n": 32,
+      "throws": 4,
+      "hit_rate": 1.0,
+      "fell": 0.0
+    },
+    {
+      "command": "run",
+      "bearing": "right",
+      "n": 32,
+      "throws": 4,
+      "hit_rate": 1.0,
+      "fell": 0.0
+    }
+  ]
+}

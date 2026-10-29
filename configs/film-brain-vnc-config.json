@@ -1,0 +1,144 @@
+{
+ "task": "jumper.posture",
+ "method": "distill-gate",
+ "base_checkpoint": "tasks/jumper/posture/out/example/model_74800.pt",
+ "experts": [
+  "/content/up/mlp-d-75100-weights.pt",
+  "/content/up/mlp-b-75200-weights.pt",
+  "/content/up/sprint16-75399.pt",
+  "/content/up/mlpRR-75100.pt",
+  "/content/up/mlpRR-75100.pt#mirror",
+  "/content/up/mlpLM-75200.pt",
+  "/content/up/mlpLM-75200.pt#mirror",
+  "/content/up/mlpLMslow-75599.pt",
+  "/content/up/mlpLMslow-75599.pt#mirror"
+ ],
+ "teachers": [
+  "/content/up/mlp-d-75100-weights.pt",
+  "/content/up/mlp-b-75200-weights.pt",
+  "/content/up/sprint16-75399.pt",
+  "/content/up/mlpRR-75100.pt",
+  "/content/up/mlpRR-75100.pt#mirror",
+  "/content/up/mlpLM-75200.pt",
+  "/content/up/mlpLM-75200.pt#mirror",
+  "/content/up/mlpLMslow-75599.pt",
+  "/content/up/mlpLMslow-75599.pt#mirror"
+ ],
+ "adapters": [
+  "five_foot",
+  "five_foot_mirror"
+ ],
+ "adapter_vmax": 0.6,
+ "programs": {
+  "front": 2,
+  "front_left": 10,
+  "front_right": 11,
+  "rear": 2,
+  "rear_left": 5,
+  "rear_right": 4,
+  "rear_always": true,
+  "grip": 1,
+  "middle": 0,
+  "middle_left": 8,
+  "middle_right": 9,
+  "middle_left_slow": 8,
+  "middle_right_slow": 9,
+  "middle_left_turn": 6,
+  "middle_right_turn": 7,
+  "turn_rate": 0.5,
+  "pairs": [],
+  "sprint": 3,
+  "sprint_speed": 1.35
+ },
+ "obs_mirror": "/content/up/mirror_actor.npz",
+ "grip_switch": 0.3,
+ "slow_official": 0.45,
+ "packet": "/content/up/vnc_ge5.npz",
+ "layout": "/content/up/layout.json",
+ "width": 1,
+ "residual_scale": 2.0,
+ "shuffle_seed": null,
+ "brain_hidden": 64,
+ "learn_synapses": true,
+ "command_readout": false,
+ "escape": true,
+ "num_envs": 4096,
+ "iterations": 300,
+ "steps": 48,
+ "chunk": 1024,
+ "epochs": 1,
+ "lr": 0.001,
+ "noise": 0.05,
+ "seed": 61,
+ "init": "/content/up/dgate5-s2-399.pt",
+ "huber": 0.0,
+ "troubles": {
+  "grip": [
+   0.02,
+   1.5
+  ],
+  "grip_p_slip": 0.3,
+  "grip_slip_high": 0.3,
+  "grip_change_s": [
+   2.0,
+   6.0
+  ],
+  "shove": null,
+  "kill_prob": 0.1,
+  "kill_interval_s": [
+   1.0,
+   4.0
+  ],
+  "kill_legs": null,
+  "guard": {
+   "terminations": [
+    "nan",
+    "unstable"
+   ],
+   "reward_clip": 1.0
+  },
+  "ladder_top": 1.6
+ },
+ "started_unix": 1792947361.435261,
+ "threat_cord": false,
+ "gf_reflex": {
+  "thr": 0.8,
+  "speed": 1.5,
+  "mode": "perp",
+  "duck": 0.03,
+  "cadence": {
+   "stride": 0.072,
+   "freq_min": 2.0,
+   "freq_max": 5.555555555555556,
+   "turn_radius": 0.2
+  },
+  "lean": 0.25,
+  "lines": {
+   "n": 64,
+   "t0": 0.07,
+   "gain": 0.85,
+   "cap": 0.28
+  },
+  "guard": {
+   "pose": [
+    -1.875,
+    -2.444,
+    -2.148,
+    3.773
+   ],
+   "steps": 120,
+   "cone": 0.8,
+   "max_elev": 0.3,
+   "kp": 40.0
+  }
+ },
+ "gf_jump": {
+  "checkpoint": "tasks/jumper/ref_free_jump/out/example/model_5999.pt",
+  "go": "/content/up/jump_go_force.npy",
+  "tau": 0.45,
+  "steps": 240,
+  "unit": 2.0,
+  "max_elev": 0.3,
+  "ahead_only": true
+ }
+}

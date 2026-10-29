@@ -1,0 +1,8 @@
+command,condition,n,fell_before_event,fell_after_event,collapsed_after_event,fall_time_median_s,track_err_pre,track_err_post,speed_ratio_post,max_tilt_post_deg,displacement_m
+walk,nominal,64,0.0,0.0,0.0,,0.0547,0.0413,0.9246,2.49,1.668
+run,nominal,64,0.0,0.0,0.0,,0.071,0.0382,0.9581,1.59,3.448
+sprint,nominal,64,0.0,0.0,0.0,,0.116,0.0523,0.961,1.49,5.759
+sprint12,nominal,64,0.0,0.0,0.0,,0.1542,0.0711,0.9573,2.16,6.884
+sprint15,nominal,64,0.0,0.0,0.0,,0.2335,0.1153,0.9459,1.56,8.495
+sprint18,nominal,64,0.0,0.0,0.0,,0.4176,0.3071,0.8544,1.14,9.194
+sprint20,nominal,64,0.0,0.0,0.0,,0.5856,0.4656,0.7946,1.53,9.512

@@ -1,0 +1,130 @@
+{
+  "meta": {
+    "checkpoint": "runs/vnc-v1/reflex/dgate6-s1-299-gfmja/model_299.pt",
+    "vnc_config": "runs/vnc-v1/reflex/dgate6-s1-299-gfmja/vnc-config.json",
+    "robots": 384,
+    "throws": 4,
+    "flight_s": 0.3,
+    "dist_m": 1.0,
+    "seed": 20261024,
+    "roll_mps": null,
+    "every_s": 2.0,
+    "balls": 1,
+    "spread_deg": 360.0,
+    "stagger_s": 0.0,
+    "straight": false,
+    "start_height_m": 0.1,
+    "hit_rate": 0.4863,
+    "volley_hit_rate": 0.4863
+  },
+  "rows": [
+    {
+      "command": "walk",
+      "bearing": "front",
+      "n": 32,
+      "throws": 4,
+      "hit_rate": 0.2188,
+      "volley_hit_rate": 0.2188,
+      "fell": 0.0
+    },
+    {
+      "command": "walk",
+      "bearing": "front_left",
+      "n": 32,
+      "throws": 4,
+      "hit_rate": 1.0,
+      "volley_hit_rate": 1.0,
+      "fell": 0.0
+    },
+    {
+      "command": "walk",
+      "bearing": "left",
+      "n": 32,
+      "throws": 4,
+      "hit_rate": 0.2422,
+      "volley_hit_rate": 0.2422,
+      "fell": 0.0
+    },
+    {
+      "command": "walk",
+      "bearing": "back_left",
+      "n": 32,
+      "throws": 4,
+      "hit_rate": 0.5234,
+      "volley_hit_rate": 0.5234,
+      "fell": 0.0
+    },
+    {
+      "command": "walk",
+      "bearing": "back",
+      "n": 32,
+      "throws": 4,
+      "hit_rate": 0.2031,
+      "volley_hit_rate": 0.2031,
+      "fell": 0.0
+    },
+    {
+      "command": "walk",
+      "bearing": "right",
+      "n": 32,
+      "throws": 4,
+      "hit_rate": 0.2656,
+      "volley_hit_rate": 0.2656,
+      "fell": 0.0
+    },
+    {
+      "command": "run",
+      "bearing": "front",
+      "n": 32,
+      "throws": 4,
+      "hit_rate": 0.0859,
+      "volley_hit_rate": 0.0859,
+      "fell": 0.0
+    },
+    {
+      "command": "run",
+      "bearing": "front_left",
+      "n": 32,
+      "throws": 4,
+      "hit_rate": 1.0,
+      "volley_hit_rate": 1.0,
+      "fell": 0.0
+    },
+    {
+      "command": "run",
+      "bearing": "left",
+      "n": 32,
+      "throws": 4,
+      "hit_rate": 0.3281,
+      "volley_hit_rate": 0.3281,
+      "fell": 0.0
+    },
+    {
+      "command": "run",
+      "bearing": "back_left",
+      "n": 32,
+      "throws": 4,
+      "hit_rate": 0.9297,
+      "volley_hit_rate": 0.9297,
+      "fell": 0.0
+    },
+    {
+      "command": "run",
+      "bearing": "back",
+      "n": 32,
+      "throws": 4,
+      "hit_rate": 0.5156,
+      "volley_hit_rate": 0.5156,
+      "fell": 0.0
+    },
+    {
+      "command": "run",
+      "bearing": "right",
+      "n": 32,
+      "throws": 4,
+      "hit_rate": 0.5234,
+      "volley_hit_rate": 0.5234,
+      "fell": 0.0
+    }
+  ]
+}

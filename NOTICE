@@ -1,0 +1,31 @@
+jumper-flybrain-conductor
+Copyright 2026 the Fly-Wired Crab authors
+
+This product's code is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+It builds on, and its release files are derived from, the following third-party works.
+
+KingKong Robotics Jumper
+  https://github.com/KingKongRobotics/jumper (commit 61d065219fca767f3142c8f10aff59eae5a5a004)
+  Apache License 2.0. The robot model, the official posture, jump and five-legged policies, and the
+  training toolkit. The motor programs in the weights release are fine-tuned from the official posture policy.
+
+MaleCNS v1.0, Janelia FlyEM
+  https://male-cns.janelia.org/
+  Creative Commons Attribution 4.0 International (CC BY 4.0).
+  Modified: the ventral nerve cord's neurons and their descending and ascending links were selected,
+  synapses with fewer than 5 contacts dropped, signs assigned from predicted neurotransmitters, and nodes
+  reordered (vnc_ge5.npz, layout.json, and the node positions behind the film's inset).
+
+Project PLATEAU 3D city models, Ministry of Land, Infrastructure, Transport and Tourism, Japan
+  https://www.mlit.go.jp/plateau/
+  3D都市モデル（Project PLATEAU）東京都23区（国土交通省）を加工して作成.
+  Used in the film's aerial shot; signs in the photo textures were blurred. No PLATEAU data is
+  redistributed in this repository.
+
+Poly Haven
+  https://polyhaven.com/
+  CC0. Props, textures and the HDRI in the film's alley, downloaded at render time.
+
+Noto Sans JP
+  SIL Open Font License 1.1. Used for the film's titles; not redistributed here.

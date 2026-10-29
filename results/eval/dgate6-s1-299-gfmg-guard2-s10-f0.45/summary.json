@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "flight_s": 0.45,
+    "dist_m": 3.0,
+    "start_height_m": 0.25,
+    "blocked": 0.9948,
+    "hit": 0.0052,
+    "checkpoint": "../../../runs/vnc-v1/reflex/dgate6-s1-299-gfmg/model_299.pt",
+    "vnc_config": "../../../runs/vnc-v1/reflex/dgate6-s1-299-gfmg/vnc-config.json"
+  },
+  "rows": [
+    {
+      "command": "walk",
+      "bearing_deg": -10.0,
+      "n": 32,
+      "throws": 4,
+      "blocked": 1.0,
+      "hit": 0.0,
+      "fell": 0.0
+    },
+    {
+      "command": "walk",
+      "bearing_deg": 0.0,
+      "n": 32,
+      "throws": 4,
+      "blocked": 1.0,
+      "hit": 0.0,
+      "fell": 0.0
+    },
+    {
+      "command": "walk",
+      "bearing_deg": 10.0,
+      "n": 32,
+      "throws": 4,
+      "blocked": 1.0,
+      "hit": 0.0,
+      "fell": 0.0
+    },
+    {
+      "command": "run",
+      "bearing_deg": -10.0,
+      "n": 32,
+      "throws": 4,
+      "blocked": 1.0,
+      "hit": 0.0,
+      "fell": 0.0
+    },
+    {
+      "command": "run",
+      "bearing_deg": 0.0,
+      "n": 32,
+      "throws": 4,
+      "blocked": 0.9922,
+      "hit": 0.0078,
+      "fell": 0.0
+    },
+    {
+      "command": "run",
+      "bearing_deg": 10.0,
+      "n": 32,
+      "throws": 4,
+      "blocked": 0.9766,
+      "hit": 0.0234,
+      "fell": 0.0
+    }
+  ]
+}

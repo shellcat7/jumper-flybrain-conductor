@@ -1,0 +1,1 @@
+Simulation. Shots are sensed from the simulator's true state, all round and without delay; the real robot has a forward camera only and would need added sensors.
