@@ -14,7 +14,7 @@ ducks, jumps or raises a claw when something flies at the robot.
 
 From one simulation recording we made a 38-second short film for Round 1 of the Crab Robot Challenge 2026.
 
-![contact sheet of the short](docs/media/contact-sheet.jpg)
+![the robot passing under the shutter, a frame from the film](docs/media/08-shutter.jpg)
 
 **Film:** `jumper_round1_short_E_1080p.mp4` on the [release page](../../releases/tag/v1)
 (1920×1080, 25 fps, 37.9 s). The same page has the trained weights.
@@ -33,25 +33,31 @@ From one simulation recording we made a 38-second short film for Round 1 of the 
 ## The controller
 
 ```
- posture observations (415) ─┬─ each leg's joints, torques, contact ─► that leg's sensory neurons ─┐
-                             └─ IMU, command, gait clock ────────────► descending / haltere inputs ─┤
-                                                                                                     ▼
-                                   fly ventral nerve cord, 24,154 nodes, signed, one step per control step (200 Hz)
-                                                     s ← (1 − a)·s + a·tanh(g·(W s) + b + u)
-                                                                                                     │
-                                   ascending + descending neuron states ─► readout ─► softmax over 12 motor programs
-                                                                                                     │
-       frozen programs: official posture policy · gait for a dead front/rear leg · low-grip gait · sprint ·
-       dead-RR, dead-LM and slow dead-LM specialists (and mirror images) · official five-legged gait (and mirror)
-                                                                                                     ▼
-                                                                                         joint position targets
+ the robot's own sensors (the official policy's 415 observations)
+   ├─ each leg's observations ───► that leg's sensory neurons (same fly leg nerve)
+   └─ IMU, command, gait clock ──► haltere afferents, descending neurons
+                      │
+                      ▼
+ fly ventral nerve cord: 24,154 nodes, 1.14 M signed synapses, one step per 5 ms
+     s ← (1 − a)·s + a·tanh(g·(W s) + b + u)
+                      │
+                      ▼
+ readout of the ascending + descending neurons ──► softmax over 12 motor programs
+                      │
+                      ▼
+ frozen programs: official walk · dead front/rear leg · low grip · sprint ·
+   dead RR, dead LM, slow dead LM (and mirrors) · official five-legged walk (and mirror)
+                      │
+                      ▼
+ joint position targets (the programs' actions, mixed by the softmax)
 
- looming (from the simulator) ─► giant-fibre reflex ─► sidestep across the bolts' lines · duck · jump · claw guard
+ looming, read from the simulator ──► giant-fibre reflex: sidestep, duck, jump, claw guard
 ```
 
-- **The cord.** MaleCNS v1.0 (Janelia FlyEM): the thoracic nerve cord (20,429 neurons) plus its descending
-  (1,314) and ascending (1,846) links, 24,154 nodes in all; synapses with at least 5 contacts (1.14 M edges);
-  signed by predicted neurotransmitter (acetylcholine excitatory, GABA and glutamate inhibitory). Each Jumper leg
+- **The cord.** MaleCNS v1.0 (Janelia FlyEM): the neurons of the thoracic nerve cord plus the descending
+  (1,314) and ascending (1,846) neurons that link it to the brain, 24,154 nodes in all; synapses with at least
+  5 contacts (1.14 M edges); signed by predicted neurotransmitter (acetylcholine excitatory, GABA and
+  glutamate inhibitory). Each Jumper leg
   is wired to the fly leg in the same place: the pro-, meso- and metathoracic leg nerves, left and right.
 - **The conductor ("director").** The cord does not move the joints itself. A readout of its ascending and
   descending neurons picks, every step, among twelve frozen motor programs. It is trained by distillation
@@ -60,6 +66,8 @@ From one simulation recording we made a 38-second short film for Round 1 of the 
 - **The escape reflex** is hand-designed after the fly's giant-fibre pathway (looming → DNp01 → jump): it fires
   when the time to contact gets short, latches a direction, and steps across the incoming lines, ducks 3 cm, jumps
   with the official jump policy, or raises the claw into a guard pose. Deflections are contact physics.
+
+![the cord's recorded activity: every node at its neuron's place in the fly's nerve cord](docs/media/10-cord-activity-heat.jpg)
 
 Full description: [docs/method.md](docs/method.md).
 
@@ -92,6 +100,8 @@ was re-recorded with a weaving command from the same seed (take 21 within 1.4 cm
 7.4 s). Rendered in Blender 5.0.1 Cycles on Colab GPUs: a back-alley set dressed with CC0 scans, the drones
 and bolts, and an aerial over a night Shinjuku built from PLATEAU 3D city models. Sound is synthesised from the
 recorded events (footfalls, servo load, bolts, hits); no samples. Details: [docs/film.md](docs/film.md).
+
+![contact sheet of the short, one frame every 1.5 s](docs/media/contact-sheet.jpg)
 
 ## Repository
 

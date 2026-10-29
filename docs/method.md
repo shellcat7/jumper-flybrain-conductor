@@ -7,12 +7,13 @@ mujoco-warp, at the official posture task's 200 Hz control rate.
 
 - Source: MaleCNS v1.0 (Janelia FlyEM), body annotations at confidence ≥ 0.5 and predicted
   neurotransmitters, from <https://male-cns.janelia.org/download/>.
-- Nodes: the thoracic ventral nerve cord's intrinsic neurons (20,429), plus the descending neurons (1,314)
-  and ascending neurons (1,846) that link it to the brain, and the cord's sensory and motor neurons:
-  24,154 in all. Nodes are reordered so that neurons near each other in the cord (segment, side, class)
-  sit near each other in memory.
-- Edges: synapses with at least 5 contacts, 1.14 M edges (`vnc_ge5.npz`, CSR).
-- Sign: acetylcholine +1, GABA and glutamate −1 (36% of edges inhibitory); other transmitters start at 0.
+- Nodes: the neurons of the thoracic ventral nerve cord (intrinsic, sensory and motor), plus the
+  descending (1,314) and ascending (1,846) neurons that link it to the brain: 24,154 in all. Nodes are
+  reordered so that neurons near each other in the cord (segment, side, class) sit near each other in memory.
+- Edges: of 4.04 M connected pairs, the 1.14 M with at least 5 contacts (`vnc_ge5.npz`, CSR). Each edge's
+  weight is its contact count.
+- Sign, per presynaptic neuron: acetylcholine +1 (14,050 neurons), GABA and glutamate −1 (8,654, 36%),
+  other or unknown transmitters 0 (1,450).
 - Ports (`layout.json`): for each Jumper leg, the sensory and motor neurons of the fly leg nerve in the
   same place (LF/RF: prothoracic, LM/RM: mesothoracic, LR/RR: metathoracic, left and right). The haltere
   afferents take the IMU; the descending neurons take the command and gait clock.
